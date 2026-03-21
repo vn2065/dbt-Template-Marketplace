@@ -1,0 +1,45 @@
+name: 'saas_metrics'
+version: '1.0.0'
+config-version: 2
+
+profile: 'saas_metrics'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+vars:
+  # Date spine configuration
+  start_date: '2020-01-01'
+  # Currency
+  default_currency: 'USD'
+  # Fiscal year offset (0 = calendar year, 3 = April fiscal year start)
+  fiscal_year_offset: 0
+
+models:
+  saas_metrics:
+    staging:
+      +materialized: view
+      +schema: staging
+    intermediate:
+      +materialized: ephemeral
+    marts:
+      +materialized: table
+      +schema: marts
+    metrics:
+      +materialized: table
+      +schema: metrics
+
+seeds:
+  saas_metrics:
+    +schema: seeds
+    +column_types:
+      id: varchar

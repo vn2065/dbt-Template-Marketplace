@@ -1,0 +1,23 @@
+saas_metrics:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake           # change to bigquery / redshift / databricks as needed
+      account: your_account
+      user: your_user
+      password: your_password
+      role: TRANSFORMER
+      database: ANALYTICS
+      warehouse: TRANSFORMING
+      schema: saas_metrics_dev
+      threads: 4
+    prod:
+      type: snowflake
+      account: your_account
+      user: your_user
+      password: "{{ env_var('DBT_PASSWORD') }}"
+      role: TRANSFORMER
+      database: ANALYTICS
+      warehouse: TRANSFORMING
+      schema: saas_metrics
+      threads: 8

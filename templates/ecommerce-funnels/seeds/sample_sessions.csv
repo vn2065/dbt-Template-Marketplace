@@ -1,0 +1,16 @@
+id,customer_id,anonymous_id,started_at,ended_at,channel,utm_source,utm_medium,utm_campaign,device_type,landing_page,converted
+sess_001,cust_001,,2023-01-15 10:25:00,2023-01-15 10:35:00,organic,,,,desktop,/running-shoes,true
+sess_002,cust_002,,2023-01-20 14:10:00,2023-01-20 14:20:00,paid_search,google,cpc,winter_jackets,desktop,/jackets,true
+sess_003,,anon_001,2023-01-22 11:00:00,2023-01-22 11:05:00,organic,,,,mobile,/home,false
+sess_004,,anon_002,2023-01-25 15:00:00,2023-01-25 15:08:00,email,newsletter,email,jan_promo,desktop,/sale,false
+sess_005,cust_001,,2023-02-05 08:55:00,2023-02-05 09:05:00,organic,,,,mobile,/accessories,true
+sess_006,cust_003,,2023-02-10 16:40:00,2023-02-10 16:50:00,paid_social,facebook,social,trail_running,desktop,/trail-shoes,true
+sess_007,,anon_003,2023-02-15 12:00:00,2023-02-15 12:03:00,organic,,,,desktop,/home,false
+sess_008,cust_004,,2023-02-15 11:15:00,2023-02-15 11:25:00,organic,,,,desktop,/apparel,true
+sess_009,,anon_004,2023-02-20 09:00:00,2023-02-20 09:10:00,paid_search,google,cpc,running_shoes,mobile,/running-shoes,false
+sess_010,cust_002,,2023-03-01 12:55:00,2023-03-01 13:05:00,email,newsletter,email,march_promo,desktop,/new-arrivals,true
+sess_011,cust_005,,2023-03-10 15:25:00,2023-03-10 15:35:00,organic,,,,mobile,/accessories,true
+sess_012,,anon_005,2023-03-15 11:00:00,2023-03-15 11:15:00,paid_social,instagram,social,spring_sale,desktop,/sale,false
+sess_013,cust_001,,2023-03-20 09:55:00,2023-03-20 10:05:00,organic,,,,desktop,/shoes,true
+sess_014,,anon_006,2023-03-25 14:00:00,2023-03-25 14:02:00,direct,,,,mobile,/home,false
+sess_015,cust_006,,2023-04-01 09:25:00,2023-04-01 09:35:00,referral,partner_blog,,spring_fitness,desktop,/yoga,true

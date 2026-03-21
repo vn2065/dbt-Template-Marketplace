@@ -1,0 +1,122 @@
+version: 2
+
+models:
+  - name: stg_subscriptions
+    description: >
+      Cleaned and standardized subscription records. One row per subscription.
+      MRR is normalized to monthly regardless of billing interval.
+    columns:
+      - name: subscription_id
+        description: Primary key - unique subscription identifier
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: Foreign key to stg_customers
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id
+      - name: plan_id
+        description: The subscription plan identifier
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['plan_starter', 'plan_pro', 'plan_enterprise']
+      - name: status
+        description: Current subscription status
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['active', 'churned', 'paused', 'trial']
+      - name: started_date
+        description: Date subscription started
+        tests:
+          - not_null
+      - name: ended_date
+        description: Date subscription ended (null if active)
+      - name: mrr_amount
+        description: Monthly recurring revenue amount in source currency
+        tests:
+          - not_null
+      - name: normalized_mrr
+        description: MRR normalized to monthly value (annual contracts divided by 12)
+        tests:
+          - not_null
+      - name: currency
+        description: ISO 4217 currency code
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['USD', 'EUR', 'GBP', 'CAD', 'AUD']
+      - name: billing_interval
+        description: How often the customer is billed
+        tests:
+          - accepted_values:
+              values: ['monthly', 'annual', 'quarterly']
+      - name: is_active
+        description: Boolean flag for currently active subscriptions
+
+  - name: stg_customers
+    description: >
+      Cleaned customer records. One row per customer. Includes enrichment
+      fields like country tier and acquisition channel.
+    columns:
+      - name: customer_id
+        description: Primary key - unique customer identifier
+        tests:
+          - unique
+          - not_null
+      - name: customer_name
+        description: Full name or company name of the customer
+        tests:
+          - not_null
+      - name: email
+        description: Customer email address
+        tests:
+          - unique
+          - not_null
+      - name: created_date
+        description: Date customer record was created
+        tests:
+          - not_null
+      - name: first_paid_date
+        description: Date of first payment
+      - name: acquisition_channel
+        description: Marketing channel that acquired the customer
+        tests:
+          - accepted_values:
+              values: ['organic', 'paid_search', 'paid_social', 'referral',
+                       'enterprise_sales', 'content', 'partner', 'event']
+
+  - name: stg_events
+    description: >
+      Normalized product and subscription events. One row per event.
+      Used for funnel analysis and MRR movement tracking.
+    columns:
+      - name: event_id
+        description: Primary key - unique event identifier
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: Foreign key to stg_customers
+        tests:
+          - not_null
+      - name: event_type
+        description: The specific type of event that occurred
+        tests:
+          - not_null
+      - name: occurred_at
+        description: Timestamp when the event occurred
+        tests:
+          - not_null
+      - name: event_category
+        description: >
+          High-level category for MRR movement attribution:
+          new_business, expansion, contraction, churn, other
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['new_business', 'expansion', 'contraction', 'churn', 'other']

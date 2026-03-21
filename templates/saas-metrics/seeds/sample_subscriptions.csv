@@ -1,0 +1,16 @@
+id,customer_id,plan_id,status,started_at,ended_at,mrr_amount,currency,billing_interval
+sub_001,cust_001,plan_pro,active,2023-01-15,,199.00,USD,monthly
+sub_002,cust_002,plan_starter,active,2023-02-01,,49.00,USD,monthly
+sub_003,cust_003,plan_enterprise,active,2023-01-01,,999.00,USD,monthly
+sub_004,cust_004,plan_pro,churned,2023-03-01,2023-08-31,199.00,USD,monthly
+sub_005,cust_005,plan_starter,active,2023-04-15,,49.00,USD,monthly
+sub_006,cust_006,plan_pro,active,2023-05-01,,199.00,USD,monthly
+sub_007,cust_007,plan_enterprise,churned,2023-02-01,2023-07-15,999.00,USD,monthly
+sub_008,cust_008,plan_starter,active,2023-06-01,,49.00,USD,monthly
+sub_009,cust_009,plan_pro,active,2023-07-15,,199.00,USD,monthly
+sub_010,cust_010,plan_enterprise,active,2023-08-01,,999.00,USD,monthly
+sub_011,cust_011,plan_starter,churned,2023-05-01,2023-09-30,49.00,USD,monthly
+sub_012,cust_012,plan_pro,active,2023-09-01,,199.00,USD,monthly
+sub_013,cust_001,plan_enterprise,active,2023-10-01,,999.00,USD,monthly
+sub_014,cust_013,plan_starter,active,2023-10-15,,49.00,USD,monthly
+sub_015,cust_014,plan_pro,active,2023-11-01,,199.00,USD,monthly

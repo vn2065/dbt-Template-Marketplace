@@ -1,0 +1,148 @@
+version: 2
+
+models:
+  - name: monthly_saas_metrics
+    description: >
+      Executive SaaS metrics dashboard table. One row per calendar month.
+      This is the primary reporting table for investor decks, board reports,
+      and BI dashboards.
+
+      Key metrics: MRR, ARR, churn rate, NRR, GRR, Quick Ratio, customer counts.
+    columns:
+      - name: mrr_month
+        description: The first day of the reporting month
+        tests:
+          - unique
+          - not_null
+      - name: ending_mrr
+        description: Total MRR at end of month across all active subscriptions
+        tests:
+          - not_null
+      - name: ending_arr
+        description: Annualized recurring revenue (ending_mrr * 12)
+        tests:
+          - not_null
+      - name: active_customers
+        description: Count of unique customers with active subscriptions
+        tests:
+          - not_null
+      - name: new_business_mrr
+        description: MRR from brand new subscriptions this month
+      - name: expansion_mrr
+        description: MRR gained from upgrades or seat additions
+      - name: contraction_mrr
+        description: MRR lost from downgrades (negative value)
+      - name: churned_mrr
+        description: MRR lost from cancellations (negative value)
+      - name: reactivation_mrr
+        description: MRR from reactivated/winback subscriptions
+      - name: net_new_mrr
+        description: Net change in MRR (sum of all movements)
+      - name: mrr_growth_rate
+        description: Month-over-month MRR growth percentage
+      - name: logo_churn_rate
+        description: >
+          Percentage of customers that churned this month.
+          Formula: churned_customers / prior_month_customers
+      - name: revenue_churn_rate
+        description: >
+          Percentage of MRR lost to churn.
+          Formula: abs(churned_mrr) / prior_month_mrr
+      - name: net_revenue_retention
+        description: >
+          NRR: expansion - contraction - churn as % of prior MRR.
+          Above 100% means expansion outpaces churn.
+      - name: gross_revenue_retention
+        description: >
+          GRR: prior MRR minus churn and contraction.
+          Maximum 100%, floor is 0%.
+      - name: quick_ratio
+        description: >
+          SaaS Quick Ratio: growth MRR / loss MRR.
+          Above 4 is excellent, above 2 is good.
+
+  - name: fct_mrr
+    description: >
+      Subscription-level monthly MRR fact table. One row per subscription per month.
+      Foundation for all MRR reporting and cohort analysis.
+    columns:
+      - name: mrr_id
+        description: Surrogate key (subscription_id + month)
+        tests:
+          - unique
+          - not_null
+      - name: subscription_id
+        description: Foreign key to dim_subscriptions
+        tests:
+          - not_null
+      - name: customer_id
+        description: Foreign key to dim_customers
+        tests:
+          - not_null
+      - name: mrr_month
+        description: First day of the reporting month
+        tests:
+          - not_null
+      - name: mrr
+        description: MRR amount for this subscription in this month
+        tests:
+          - not_null
+      - name: movement_type
+        description: How this subscription's MRR changed vs prior month
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['new_business', 'expansion', 'contraction', 'churn',
+                       'reactivation', 'retained']
+
+  - name: fct_churn
+    description: >
+      Churn event table. One row per churned subscription.
+      Use for churn reason analysis, cohort survival analysis,
+      and win-back campaign targeting.
+    columns:
+      - name: churn_id
+        description: Surrogate primary key
+        tests:
+          - unique
+          - not_null
+      - name: subscription_id
+        description: The subscription that churned
+        tests:
+          - unique
+          - not_null
+      - name: churned_date
+        description: Date the subscription ended
+        tests:
+          - not_null
+      - name: churned_mrr
+        description: MRR value at time of churn
+        tests:
+          - not_null
+      - name: subscription_length_months
+        description: How long the customer was subscribed in months
+        tests:
+          - not_null
+
+  - name: dim_customers
+    description: >
+      Customer dimension table. One row per customer.
+      Enriched with current subscription info, LTV, and segmentation.
+    columns:
+      - name: customer_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+      - name: customer_status
+        description: active or churned
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['active', 'churned']
+      - name: customer_segment
+        description: enterprise / mid_market / smb / churned based on MRR
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['enterprise', 'mid_market', 'smb', 'churned']

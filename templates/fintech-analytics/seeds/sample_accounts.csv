@@ -1,0 +1,13 @@
+id,user_id,account_type,status,opened_at,closed_at,balance,currency,credit_limit,country,kyc_status,risk_tier
+acc_001,usr_001,checking,active,2022-01-15,,5420.00,USD,,US,verified,low
+acc_002,usr_002,checking,active,2022-03-01,,1250.00,USD,,US,verified,low
+acc_003,usr_003,premium,active,2021-06-15,,28500.00,USD,50000,US,verified,medium
+acc_004,usr_004,checking,suspended,2023-01-01,,200.00,USD,,RU,pending,high
+acc_005,usr_005,checking,active,2022-08-01,,3100.00,USD,,US,verified,low
+acc_006,usr_006,premium,active,2022-01-01,,95000.00,USD,100000,US,verified,high
+acc_007,usr_007,checking,active,2022-11-15,,8750.00,USD,,US,verified,low
+acc_008,usr_008,checking,active,2023-01-01,,12300.00,USD,,UK,verified,medium
+acc_009,usr_009,savings,active,2022-05-01,,45000.00,USD,,US,verified,low
+acc_010,usr_010,checking,active,2022-09-15,,2200.00,USD,,CA,verified,low
+acc_011,usr_011,checking,active,2023-03-01,,890.00,USD,,US,verified,low
+acc_012,usr_012,checking,active,2022-12-01,,6700.00,USD,,US,verified,low

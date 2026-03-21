@@ -1,0 +1,15 @@
+id,name,email,company,industry,country,created_at,sales_rep,acquisition_channel,first_paid_at
+cust_001,Alice Johnson,alice@acme.com,Acme Corp,Software,US,2023-01-10,rep_sarah,organic,2023-01-15
+cust_002,Bob Smith,bob@widgets.io,Widgets Inc,Manufacturing,CA,2023-01-25,rep_john,paid_search,2023-02-01
+cust_003,Carol White,carol@bigco.com,BigCo Ltd,Finance,UK,2022-12-15,rep_sarah,enterprise_sales,2023-01-01
+cust_004,David Lee,david@startup.co,Startup Co,Software,US,2023-02-20,rep_mike,organic,2023-03-01
+cust_005,Emma Davis,emma@retail.com,RetailMart,Retail,AU,2023-04-01,rep_john,paid_social,2023-04-15
+cust_006,Frank Brown,frank@logistics.net,Logistics Net,Logistics,DE,2023-04-15,rep_sarah,referral,2023-05-01
+cust_007,Grace Wilson,grace@media.co,Media Co,Media,US,2023-01-15,rep_mike,enterprise_sales,2023-02-01
+cust_008,Henry Taylor,henry@shop.io,Shop.io,eCommerce,US,2023-05-10,rep_john,organic,2023-06-01
+cust_009,Iris Martinez,iris@health.com,HealthTech,Healthcare,US,2023-07-01,rep_sarah,paid_search,2023-07-15
+cust_010,James Anderson,james@finco.com,FinCo,Finance,US,2023-07-15,rep_mike,enterprise_sales,2023-08-01
+cust_011,Kate Thompson,kate@events.io,Events.io,Events,CA,2023-04-20,rep_john,organic,2023-05-01
+cust_012,Liam Garcia,liam@dev.tools,DevTools Inc,Software,US,2023-08-15,rep_sarah,content,2023-09-01
+cust_013,Mia Rodriguez,mia@nonprofit.org,Nonprofit Org,Education,US,2023-10-01,rep_mike,organic,2023-10-15
+cust_014,Noah Harris,noah@agency.com,Agency Plus,Marketing,UK,2023-10-20,rep_john,referral,2023-11-01

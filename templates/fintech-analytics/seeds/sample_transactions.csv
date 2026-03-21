@@ -1,0 +1,26 @@
+id,account_id,user_id,transaction_type,amount,currency,status,created_at,settled_at,merchant_category,merchant_name,country,payment_method,risk_score,is_flagged
+txn_001,acc_001,usr_001,purchase,49.99,USD,settled,2023-01-15 10:30:00,2023-01-17 00:00:00,retail,Coffee Shop A,US,card,12,false
+txn_002,acc_001,usr_001,purchase,1250.00,USD,settled,2023-01-20 14:15:00,2023-01-22 00:00:00,electronics,Electronics Store B,US,card,28,false
+txn_003,acc_002,usr_002,purchase,25.50,USD,settled,2023-01-22 09:00:00,2023-01-24 00:00:00,food,Restaurant C,US,card,8,false
+txn_004,acc_003,usr_003,purchase,3200.00,USD,settled,2023-01-25 16:45:00,2023-01-27 00:00:00,travel,Airline D,US,card,45,false
+txn_005,acc_001,usr_001,purchase,89.99,USD,settled,2023-02-01 11:20:00,2023-02-03 00:00:00,retail,Clothing Store E,US,card,15,false
+txn_006,acc_004,usr_004,purchase,5500.00,USD,pending,2023-02-05 08:00:00,,crypto,Crypto Exchange F,RU,card,82,true
+txn_007,acc_002,usr_002,transfer,500.00,USD,settled,2023-02-10 13:00:00,2023-02-10 13:01:00,transfer,,US,ach,5,false
+txn_008,acc_005,usr_005,purchase,149.99,USD,settled,2023-02-15 15:30:00,2023-02-17 00:00:00,software,SaaS Tool G,US,card,18,false
+txn_009,acc_003,usr_003,purchase,75.00,USD,settled,2023-03-01 10:00:00,2023-03-03 00:00:00,food,Restaurant H,US,card,10,false
+txn_010,acc_006,usr_006,purchase,12000.00,USD,settled,2023-03-05 09:30:00,2023-03-07 00:00:00,luxury,Jewelry Store I,US,card,65,true
+txn_011,acc_001,usr_001,purchase,34.99,USD,settled,2023-03-10 14:00:00,2023-03-12 00:00:00,retail,Grocery Store J,US,card,7,false
+txn_012,acc_007,usr_007,purchase,999.00,USD,settled,2023-03-15 16:00:00,2023-03-17 00:00:00,electronics,Electronics Store K,US,card,30,false
+txn_013,acc_004,usr_004,purchase,200.00,USD,declined,2023-03-20 11:00:00,,gambling,Casino L,RU,card,88,true
+txn_014,acc_002,usr_002,purchase,55.00,USD,settled,2023-04-01 09:00:00,2023-04-03 00:00:00,food,Coffee Shop M,US,card,9,false
+txn_015,acc_008,usr_008,purchase,2500.00,USD,settled,2023-04-10 14:00:00,2023-04-12 00:00:00,travel,Hotel N,UK,card,25,false
+txn_016,acc_001,usr_001,refund,-89.99,USD,settled,2023-04-15 11:00:00,2023-04-17 00:00:00,retail,Clothing Store E,US,card,5,false
+txn_017,acc_009,usr_009,purchase,450.00,USD,settled,2023-05-01 10:00:00,2023-05-03 00:00:00,healthcare,Medical Clinic O,US,card,15,false
+txn_018,acc_010,usr_010,purchase,75.00,USD,settled,2023-05-15 13:00:00,2023-05-17 00:00:00,food,Restaurant P,CA,card,11,false
+txn_019,acc_003,usr_003,purchase,8900.00,USD,settled,2023-06-01 09:30:00,2023-06-03 00:00:00,travel,Luxury Hotel Q,AE,card,55,true
+txn_020,acc_005,usr_005,purchase,199.99,USD,settled,2023-06-15 14:00:00,2023-06-17 00:00:00,software,SaaS Tool R,US,card,20,false
+txn_021,acc_011,usr_011,purchase,35.00,USD,settled,2023-07-01 10:30:00,2023-07-03 00:00:00,food,Coffee Shop S,US,card,8,false
+txn_022,acc_006,usr_006,purchase,25000.00,USD,flagged,2023-07-10 15:00:00,,crypto,Crypto Exchange T,RU,wire,92,true
+txn_023,acc_002,usr_002,transfer,1000.00,USD,settled,2023-08-01 11:00:00,2023-08-01 11:02:00,transfer,,US,ach,6,false
+txn_024,acc_012,usr_012,purchase,299.99,USD,settled,2023-08-15 13:00:00,2023-08-17 00:00:00,electronics,Electronics Store U,US,card,22,false
+txn_025,acc_001,usr_001,purchase,125.00,USD,settled,2023-09-01 10:00:00,2023-09-03 00:00:00,retail,Department Store V,US,card,14,false

@@ -1,0 +1,31 @@
+id,order_id,product_id,product_name,category,quantity,unit_price,total_price
+item_001,ord_001,prod_shoes_001,Running Shoes X1,footwear,1,89.99,89.99
+item_002,ord_002,prod_jacket_001,Winter Jacket Pro,apparel,1,149.99,149.99
+item_003,ord_003,prod_socks_001,Athletic Socks 3pk,accessories,2,29.99,59.98
+item_004,ord_004,prod_shoes_002,Trail Runners Pro,footwear,1,299.99,299.99
+item_005,ord_005,prod_tshirt_001,Performance Tee,apparel,2,39.99,79.98
+item_006,ord_006,prod_jacket_002,Lightweight Jacket,apparel,1,199.99,199.99
+item_007,ord_007,prod_socks_001,Athletic Socks 3pk,accessories,1,29.99,29.99
+item_008,ord_007,prod_hat_001,Running Cap,accessories,1,19.99,19.99
+item_009,ord_008,prod_shoes_003,Casual Sneakers,footwear,1,129.99,129.99
+item_010,ord_009,prod_tshirt_002,Yoga Top,apparel,1,89.99,89.99
+item_011,ord_010,prod_shoes_004,Performance Runners Elite,footwear,1,399.99,399.99
+item_012,ord_011,prod_tshirt_001,Performance Tee,apparel,1,59.99,59.99
+item_013,ord_012,prod_jacket_003,Softshell Jacket,apparel,1,99.99,99.99
+item_014,ord_013,prod_shoes_001,Running Shoes X1,footwear,1,89.99,89.99
+item_015,ord_013,prod_socks_002,Compression Socks,accessories,2,39.99,79.98
+item_016,ord_013,prod_hat_001,Running Cap,accessories,1,19.99,19.99
+item_017,ord_013,prod_tshirt_002,Yoga Top,apparel,1,59.99,59.99
+item_018,ord_014,prod_tshirt_001,Performance Tee,apparel,2,39.99,79.98
+item_019,ord_015,prod_shoes_005,Basketball Shoes,footwear,1,159.99,159.99
+item_020,ord_016,prod_socks_001,Athletic Socks 3pk,accessories,3,29.99,89.97
+item_021,ord_017,prod_shoes_006,Trail Boot,footwear,1,329.99,329.99
+item_022,ord_018,prod_jacket_004,Rain Jacket,apparel,1,119.99,119.99
+item_023,ord_019,prod_tshirt_003,Compression Shirt,apparel,2,99.99,199.98
+item_024,ord_020,prod_shoes_007,Road Cycling Shoes,footwear,1,499.99,499.99
+item_025,ord_022,prod_shoes_001,Running Shoes X1,footwear,1,89.99,89.99
+item_026,ord_022,prod_socks_002,Compression Socks,accessories,1,39.99,39.99
+item_027,ord_022,prod_hat_001,Running Cap,accessories,1,19.99,19.99
+item_028,ord_023,prod_tshirt_001,Performance Tee,apparel,2,39.99,79.98
+item_029,ord_024,prod_jacket_002,Lightweight Jacket,apparel,1,199.99,199.99
+item_030,ord_025,prod_shoes_004,Performance Runners Elite,footwear,1,299.99,299.99

@@ -1,0 +1,42 @@
+name: dbt CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  dbt-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dbt
+        run: |
+          pip install dbt-core dbt-duckdb
+
+      - name: Install dbt packages
+        run: dbt deps
+        working-directory: .
+
+      - name: Seed sample data
+        run: dbt seed --profiles-dir ci --target ci
+        working-directory: .
+
+      - name: Run models
+        run: dbt run --profiles-dir ci --target ci
+        working-directory: .
+
+      - name: Run tests
+        run: dbt test --profiles-dir ci --target ci
+        working-directory: .
+
+      - name: Generate docs
+        run: dbt docs generate --profiles-dir ci --target ci
+        working-directory: .
