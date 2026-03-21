@@ -14,9 +14,9 @@ A production-ready dbt template with:
 ✅ 100% test coverage
 ✅ GitHub Actions CI
 
-Stop rebuilding. Start shipping.
+Free and open source. Stop rebuilding. Start shipping.
 
-[Gumroad link] #dbt #analyticsengineering #SaaS
+[GitHub link] #dbt #analyticsengineering #SaaS #opensource
 ```
 
 ### Twitter/X — eCommerce
@@ -30,16 +30,16 @@ Includes:
 🔄 Cohort repeat purchase analysis
 💰 Full revenue/AOV/conversion metrics
 
-Works with Shopify, WooCommerce, or custom schemas.
+Free and open source. Works with Shopify, WooCommerce, or custom schemas.
 
-[Gumroad link] #dbt #ecommerce #analyticsengineering
+[GitHub link] #dbt #ecommerce #analyticsengineering #opensource
 ```
 
 ### Twitter/X — Fintech
 ```
 Fintech analytics is different. You don't just need revenue reporting — you need transaction intelligence.
 
-New dbt template for fintech teams:
+New free dbt template for fintech teams:
 🔍 Composite risk scoring
 🚨 AML monitoring signals
 💳 TPV / GMV reporting
@@ -47,7 +47,9 @@ New dbt template for fintech teams:
 🌍 Cross-border transaction analysis
 ✅ OFAC-aware country flagging
 
-[Gumroad link] #dbt #fintech #compliance #analyticsengineering
+Free and open source.
+
+[GitHub link] #dbt #fintech #compliance #analyticsengineering #opensource
 ```
 
 ---
@@ -56,7 +58,7 @@ New dbt template for fintech teams:
 
 ### Launch — Long Form
 ```
-I spent the last 6 years building SaaS analytics stacks from scratch at 3 different companies.
+I spent years building SaaS analytics stacks from scratch at different companies.
 
 Every single time, I rebuilt the same models:
 - MRR waterfall
@@ -66,7 +68,7 @@ Every single time, I rebuilt the same models:
 
 It took 4-6 weeks each time.
 
-So I packaged everything into a production-ready dbt template.
+So I packaged everything into a production-ready dbt template and open-sourced it.
 
 16 models. Full test coverage. CI/CD included. BI-ready.
 
@@ -83,7 +85,7 @@ The `monthly_saas_metrics` table gives you every metric your investors will ask 
 
 You can be running full SaaS analytics in an afternoon instead of a month.
 
-Available now on Gumroad: [link]
+Free on GitHub: [link]
 
 (Also have eCommerce and Fintech versions for those industries)
 ```
@@ -93,39 +95,39 @@ Available now on Gumroad: [link]
 ## Reddit Posts
 
 ### r/dataengineering
-**Title:** I built production-ready dbt templates for SaaS, eCommerce, and Fintech analytics — here's what's in them
+**Title:** I open-sourced production-ready dbt templates for SaaS, eCommerce, and Fintech analytics
 
 ```
 After rebuilding the same analytics layers multiple times across different companies,
-I decided to package them into reusable dbt templates.
+I decided to package them into reusable dbt templates and open-source them.
 
 Each template includes:
 - Staging, intermediate, and mart layers
 - Full dbt test coverage
 - Column-level docs
-- GitHub Actions CI workflow (DuckDB for local testing)
+- GitHub Actions CI workflow (DuckDB, no warehouse credentials needed)
 - Macro utilities
 - Analysis files for common questions
 
-**SaaS Metrics** ($149):
+**SaaS Metrics**:
 - MRR waterfall, NRR, GRR, Quick Ratio
 - Cohort retention analysis
 - Customer LTV
 
-**eCommerce Funnels** ($129):
+**eCommerce Funnels**:
 - RFM segmentation (7 segments)
 - Purchase funnel analysis
 - Product analytics
 
-**Fintech Analytics** ($179):
+**Fintech Analytics**:
 - Transaction risk scoring
 - AML monitoring signals
 - TPV/GMV reporting
 - Account risk queue
 
-Happy to answer questions about the modeling approach.
+All free on GitHub: [link]
 
-[Link to Gumroad]
+Happy to answer questions about the modeling approach or take PRs.
 ```
 
 ---
@@ -133,7 +135,7 @@ Happy to answer questions about the modeling approach.
 ## Email Sequence (to newsletter)
 
 ### Email 1: Launch announcement
-**Subject:** Stop rebuilding the same dbt models
+**Subject:** I open-sourced my dbt template library
 
 **Body:**
 Hey [name],
@@ -145,21 +147,19 @@ If you work in analytics engineering, you've probably built some version of thes
 - eCommerce RFM segments
 - Transaction risk scoring
 
-I've built each of them 2-3 times across different companies. It takes weeks, and most of the work is the same every time.
+I've built each of them multiple times. It takes weeks, and most of the work is the same every time.
 
-So I packaged them.
+So I packaged them and put them on GitHub for free:
 
-I'm launching the **dbt Template Marketplace** — production-ready dbt projects for specific industries:
+→ **SaaS Metrics** — MRR, churn, NRR, LTV, cohort retention
+→ **eCommerce Funnels** — RFM, purchase funnel, product analytics
+→ **Fintech Analytics** — Transaction risk, TPV, AML monitoring
 
-→ **SaaS Metrics** ($149) — MRR, churn, NRR, LTV, cohort retention
-→ **eCommerce Funnels** ($129) — RFM, purchase funnel, product analytics
-→ **Fintech Analytics** ($179) — Transaction risk, TPV, AML monitoring
+Each template has full tests, docs, and CI/CD included. MIT licensed.
 
-Each template has full tests, docs, and CI/CD included.
-
-[See the templates →]
+[See the templates on GitHub →]
 
 — [Your name]
 
-P.S. If you're an agency or consultant who builds these for clients, reply and let's talk bulk licensing.
+P.S. PRs welcome if you want to add something or improve a model.
 ```

@@ -1,19 +1,19 @@
 # Gumroad Listing: eCommerce Funnels dbt Template
 
 ## Product Title
-eCommerce Analytics dbt Template — Funnels, RFM, Cohorts & Product Analytics
+eCommerce Analytics dbt Template — Funnels, RFM, Cohorts & Product Analytics (Free)
 
 ## Price
-$129
+Free (or "pay what you want" with $0 minimum)
 
 ## Short Description
-Production-ready dbt project for eCommerce. Get purchase funnels, RFM customer segmentation, cohort analysis, and product performance dashboards. Works with Shopify, WooCommerce, and any custom schema.
+Production-ready dbt project for eCommerce. Get purchase funnels, RFM customer segmentation, cohort analysis, and product performance dashboards. Free and open source. Works with Shopify, WooCommerce, and any custom schema.
 
 ---
 
 ## Full Listing Description
 
-**Your eCommerce data team's unfair advantage.**
+**Your eCommerce data team's unfair advantage — free.**
 
 Most eCommerce companies have the data but not the models. This template gives you a complete analytics layer in a weekend — not a quarter.
 
@@ -51,46 +51,16 @@ Most eCommerce companies have the data but not the models. This template gives y
 - Best sellers by revenue and volume
 - Category performance
 - Revenue share (product and category level)
-- First/last sold dates
-
-**Funnel Analysis:**
-- Session → Product view → Add to cart → Purchase
-- Conversion rates by channel and device
-- Drop-off identification
 
 ---
 
-### Who this is for
+### Also available (also free)
+- SaaS Metrics template — MRR, churn, NRR, LTV
+- Fintech Analytics template — Transaction risk, TPV, AML monitoring
 
-- Analytics engineers at DTC / eCommerce brands
-- Consultants building client analytics stacks
-- Agencies managing multiple Shopify stores
-- BI teams needing a clean semantic layer
-
----
-
-### Data sources
-
-Works out of the box with sample data. Adapt staging models for:
-- **Shopify** (via Fivetran or Airbyte connector)
-- **WooCommerce**
-- **Magento**
-- **Any custom order management system**
-
----
-
-### FAQ
-
-**Does this include Shopify-specific models?**
-The staging layer maps to common eCommerce schemas. A Shopify mapping guide is included.
-
-**Can I add more funnel steps?**
-Yes — the funnel analysis file is designed to be extended. Add any event-based funnel steps.
-
-**Does it handle returns/refunds?**
-Yes — refunds are handled in `stg_orders` and excluded from revenue metrics correctly.
+All templates on GitHub: [link]
 
 ---
 
 ## Tags
-dbt, ecommerce analytics, RFM, customer segmentation, Shopify analytics, purchase funnel, cohort analysis, dbt template, data engineering
+dbt, ecommerce analytics, RFM, customer segmentation, Shopify analytics, purchase funnel, cohort analysis, dbt template, free, open source

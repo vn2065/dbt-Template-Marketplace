@@ -1,21 +1,21 @@
 # Gumroad Listing: Fintech Analytics dbt Template
 
 ## Product Title
-Fintech Analytics dbt Template — Transactions, Risk Monitoring & AML
+Fintech Analytics dbt Template — Transactions, Risk Monitoring & AML (Free)
 
 ## Price
-$179
+Free (or "pay what you want" with $0 minimum)
 
 ## Short Description
-Production-ready dbt project for fintech analytics. Transaction intelligence, risk scoring, AML monitoring signals, TPV reporting, and compliance-ready account risk queuing. Stripe, Adyen, and custom schemas supported.
+Production-ready dbt project for fintech analytics. Transaction intelligence, risk scoring, AML monitoring signals, TPV reporting, and compliance-ready account risk queuing. Free and open source.
 
 ---
 
 ## Full Listing Description
 
-**The analytics layer your compliance team has been asking for.**
+**The analytics layer your compliance team has been asking for — free.**
 
-Fintech analytics is different. You need transaction intelligence, not just revenue reporting. This template gives you production-grade models for both.
+Fintech analytics is different. You need transaction intelligence, not just revenue reporting. This template gives you production-grade models for both, at no cost.
 
 ### What you get
 
@@ -32,7 +32,6 @@ Fintech analytics is different. You need transaction intelligence, not just reve
 - Decline rate analysis
 - Payment method mix (card / ACH / wire / crypto)
 - Cross-border volume and rate
-- Month-over-month growth
 
 **Risk & Compliance monitoring:**
 
@@ -47,60 +46,20 @@ Composite risk scoring considers:
 **Account risk queue with recommended actions:**
 | Risk Level | Action |
 |------------|--------|
-| Critical | Immediate review (unverified + flagged) |
+| Critical | Immediate review |
 | High (score ≥ 80) | File SAR |
 | High (score ≥ 60) | Enhanced Due Diligence |
-| Flagged transactions | Monitor |
-
-**AML-aware design:**
-- High-risk country flagging (OFAC-aware)
-- Velocity anomaly signals (extensible)
-- Suspicious activity pattern detection
-- Structuring detection framework
+| Flagged | Monitor |
 
 ---
 
-### Who this is for
+### Also available (also free)
+- SaaS Metrics template — MRR, churn, NRR, LTV
+- eCommerce Funnels template — RFM, funnels, cohorts
 
-- Analytics engineers at neobanks, payment processors, or fintech startups
-- Data teams supporting compliance and risk operations
-- Consultants building financial data products
-- Fraud/risk analysts needing a clean data layer
-
----
-
-### Important disclaimer
-
-> This template provides analytical tooling to support risk monitoring workflows.
-> It does not constitute legal compliance advice. Consult qualified compliance
-> counsel for regulatory requirements specific to your jurisdiction, license type,
-> and transaction volumes.
-
----
-
-### Data sources
-
-Designed to connect to:
-- **Stripe** (charges, disputes, payouts)
-- **Adyen** (transactions, risk signals)
-- **Braintree** / **Square**
-- **Core banking** / ledger systems
-- **Custom payment infrastructure**
-
----
-
-### FAQ
-
-**Is this PCI compliant?**
-Models are designed to never store raw card data. Compliance with PCI DSS depends on your full data stack architecture.
-
-**Can I extend the risk scoring?**
-Yes — the composite score formula in `int_transaction_risk.sql` is fully documented and extensible.
-
-**Does it include SAR filing logic?**
-The `risk_monitoring` model flags accounts that meet SAR-worthy thresholds. Actual SAR filing workflows depend on your compliance tooling.
+All templates on GitHub: [link]
 
 ---
 
 ## Tags
-dbt, fintech analytics, AML, transaction monitoring, risk scoring, TPV, payment analytics, compliance analytics, fraud detection, dbt template
+dbt, fintech analytics, AML, transaction monitoring, risk scoring, TPV, payment analytics, compliance analytics, fraud detection, dbt template, free, open source

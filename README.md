@@ -1,16 +1,16 @@
 # dbt Template Marketplace
 
-Production-ready dbt project templates for specific industries. Buy once, deploy in minutes.
+Production-ready dbt project templates for specific industries. Free and open source.
 
 ## Available Templates
 
 | Template | Industry | Price | What You Get |
 |----------|----------|-------|--------------|
-| **SaaS Metrics** | SaaS / Subscriptions | $149 | MRR, ARR, Churn, LTV, CAC, NPS analytics |
-| **eCommerce Funnels** | eCommerce / Retail | $129 | Funnel analysis, cohorts, RFM, product analytics |
-| **Fintech Analytics** | Finance / Fintech | $179 | Transaction risk, revenue recognition, portfolio analytics |
+| **SaaS Metrics** | SaaS / Subscriptions | Free | MRR, ARR, Churn, LTV, CAC, NPS analytics |
+| **eCommerce Funnels** | eCommerce / Retail | Free | Funnel analysis, cohorts, RFM, product analytics |
+| **Fintech Analytics** | Finance / Fintech | Free | Transaction risk, revenue recognition, portfolio analytics |
 
-## Why Buy a Template?
+## Why Use These Templates?
 
 - **Save 40-80 hours** of dbt modeling work
 - **Production-ready** — tested, documented, and following dbt best practices
@@ -31,8 +31,8 @@ Production-ready dbt project templates for specific industries. Buy once, deploy
 ## Quick Start
 
 ```bash
-# 1. Clone or download your purchased template
-git clone <your-template-repo>
+# 1. Clone the repo
+git clone <this-repo>
 
 # 2. Install dependencies
 pip install dbt-core dbt-<your-adapter>
@@ -62,16 +62,11 @@ All templates are adapter-agnostic and tested on:
 - Redshift
 - DuckDB (local dev)
 
-## Purchase
-
-Visit our [Gumroad Store](https://your-gumroad-url) to purchase templates.
-
 ## Support
 
-- Email: support@your-domain.com
-- Documentation: Included with each template
-- Updates: 12 months of free updates included
+- Open an issue on GitHub for bugs or questions
+- Documentation: included in each template's README
 
 ## License
 
-Each template is licensed for use in a single organization. See `LICENSE.md` in each template for details.
+MIT — free to use, modify, and distribute. See `LICENSE` for details.

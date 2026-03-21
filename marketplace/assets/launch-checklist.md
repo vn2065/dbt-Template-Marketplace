@@ -8,60 +8,43 @@
 - [ ] Verify all models compile without errors
 - [ ] Check all tests pass
 - [ ] Review staging model column mappings — document edge cases
-- [ ] Package each template into a zip: `bash marketplace/scripts/package_templates.sh`
-- [ ] Test each zip unpacks correctly
 
-### Gumroad Setup
-- [ ] Create Gumroad account at gumroad.com
-- [ ] Connect Stripe for payouts
-- [ ] Create product for each template (use copy from `marketplace/gumroad/`)
-- [ ] Upload ZIP files as product assets
-- [ ] Add a PDF setup guide to each product
-- [ ] Set up bundle product at $349
-- [ ] Configure 30% affiliate commission
-- [ ] Add 14-day refund policy
-- [ ] Set up custom domain (optional): store.yourdomain.com
-- [ ] Test purchase flow end-to-end (buy your own product)
-- [ ] Verify download/delivery works
+### GitHub Setup
+- [ ] Make repository public
+- [ ] Add topics: `dbt`, `analytics-engineering`, `saas`, `ecommerce`, `fintech`, `open-source`
+- [ ] Add a `CONTRIBUTING.md`
+- [ ] Add screenshots of `dbt docs` output to README
+- [ ] Create first GitHub Release with a tag (e.g. `v1.0.0`)
+- [ ] Add to `awesome-dbt` list (GitHub PR)
 
-### Content
-- [ ] Write setup guide PDFs (one per template)
-- [ ] Record 5-min walkthrough video (optional but high-converting)
-- [ ] Take screenshots of `dbt docs` for listing images
-- [ ] Create social graphics (Figma or Canva)
+### Gumroad Setup (optional — for email capture)
+- [ ] Create Gumroad account
+- [ ] Create product for each template using copy from `marketplace/gumroad/`
+- [ ] Set price to $0 with "pay what you want" enabled
+- [ ] Upload ZIP files (run `bash marketplace/scripts/package_templates.sh` first)
+- [ ] Test download flow end-to-end
+- [ ] Note: primary value here is collecting buyer emails for update announcements
 
 ### Distribution
-- [ ] Post launch thread on Twitter/X
+- [ ] Post launch thread on Twitter/X (use templates in `social-post-templates.md`)
 - [ ] Post on LinkedIn
 - [ ] Submit to r/dataengineering
-- [ ] Post in dbt Slack (#tools-and-integrations or #analytics-engineering)
-- [ ] Post in relevant Discord servers (Data Engineering, Analytics Engineering)
+- [ ] Post in dbt Slack (#tools-and-integrations)
+- [ ] Post in Analytics Engineering Discord
 - [ ] Email your newsletter (if you have one)
-- [ ] Submit to relevant newsletters (Data Engineering Weekly, Benn Stancil, etc.)
-
-### SEO (optional but valuable)
-- [ ] Write a blog post: "How I built a SaaS MRR model in dbt"
-- [ ] Submit to dev.to / Hashnode
-- [ ] Add to your GitHub profile README
+- [ ] Submit to Data Engineering Weekly newsletter
 
 ---
 
 ## Post-Launch
 
 ### Week 1
-- [ ] Respond to every customer email within 24 hours
-- [ ] Note common questions → add to FAQ in listing
-- [ ] Check analytics: views, conversion rate, refunds
-- [ ] Ask first 3 customers for feedback/testimonials
+- [ ] Respond to every issue/comment within 24 hours
+- [ ] Note common questions → add to README FAQ sections
+- [ ] Check GitHub stars and referral traffic
 
 ### Month 1
-- [ ] Collect testimonials → add to listings
-- [ ] Fix any bugs reported by customers
-- [ ] Release update to existing customers (Gumroad sends automatically)
-- [ ] Analyze which template sells best → double down
-- [ ] Consider a 4th template based on demand signals
-
-### Ongoing
-- [ ] Update templates when dbt releases major versions
-- [ ] Add new metrics based on customer requests
-- [ ] Build email list from buyers for future launches
+- [ ] Incorporate any community feedback / bug fixes
+- [ ] Cut a `v1.1.0` release
+- [ ] Ask early users for testimonials to add to README
+- [ ] Consider a 4th template based on most-requested industry
