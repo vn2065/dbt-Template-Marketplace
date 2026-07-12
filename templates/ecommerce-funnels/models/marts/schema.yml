@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: Order fact table. One row per order, the primary grain for revenue analysis.
+    columns:
+      - name: order_id
+        description: Primary key.
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        tests:
+          - not_null
+      - name: total_amount
+        tests:
+          - not_null
+
+  - name: dim_customers_ecom
+    description: eCommerce customer dimension with RFM scores and lifecycle stage.
+    columns:
+      - name: customer_id
+        description: Primary key.
+        tests:
+          - not_null
+          - unique
+      - name: value_tier
+        tests:
+          - accepted_values:
+              values: ['high_value', 'mid_value', 'low_value']
+      - name: lifecycle_stage
+        tests:
+          - accepted_values:
+              values: ['new', 'active', 'at_risk', 'lapsed', 'unknown']
+      - name: frequency_segment
+        tests:
+          - accepted_values:
+              values: ['very_frequent', 'frequent', 'repeat', 'one_time']

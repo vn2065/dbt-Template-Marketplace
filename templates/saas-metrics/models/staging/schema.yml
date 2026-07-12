@@ -1,0 +1,58 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: One row per customer, renamed and typed from the raw seed.
+    columns:
+      - name: customer_id
+        description: Primary key.
+        tests:
+          - not_null
+          - unique
+      - name: email
+        tests:
+          - not_null
+      - name: country_tier
+        tests:
+          - accepted_values:
+              values: ['tier_1', 'tier_2']
+
+  - name: stg_subscriptions
+    description: One row per subscription, renamed and typed from the raw seed.
+    columns:
+      - name: subscription_id
+        description: Primary key.
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id
+      - name: status
+        tests:
+          - not_null
+      - name: mrr_amount
+        tests:
+          - not_null
+
+  - name: stg_events
+    description: One row per product/billing event, renamed and typed from the raw seed.
+    columns:
+      - name: event_id
+        description: Primary key.
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id
+      - name: event_category
+        tests:
+          - accepted_values:
+              values: ['new_business', 'expansion', 'contraction', 'churn', 'other']

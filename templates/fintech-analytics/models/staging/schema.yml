@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: stg_accounts
+    description: One row per account, renamed and typed from the raw seed.
+    columns:
+      - name: account_id
+        description: Primary key.
+        tests:
+          - not_null
+          - unique
+      - name: user_id
+        tests:
+          - not_null
+      - name: balance_tier
+        tests:
+          - accepted_values:
+              values: ['high_balance', 'mid_balance', 'low_balance']
+
+  - name: stg_transactions
+    description: One row per transaction, renamed and typed from the raw seed.
+    columns:
+      - name: transaction_id
+        description: Primary key.
+        tests:
+          - not_null
+          - unique
+      - name: account_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_accounts')
+              field: account_id
+      - name: transaction_direction
+        tests:
+          - accepted_values:
+              values: ['debit', 'credit', 'transfer', 'other']
+      - name: risk_tier
+        tests:
+          - accepted_values:
+              values: ['high', 'medium', 'low']

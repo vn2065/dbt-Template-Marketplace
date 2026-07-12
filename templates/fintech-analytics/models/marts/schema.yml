@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: fct_transactions
+    description: Transaction fact table. One row per transaction, the primary grain for financial reporting and risk analytics.
+    columns:
+      - name: txn_key
+        description: Surrogate key generated from transaction_id.
+        tests:
+          - not_null
+          - unique
+      - name: transaction_id
+        tests:
+          - not_null
+          - unique
+      - name: account_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_accounts')
+              field: account_id
+      - name: risk_tier
+        tests:
+          - accepted_values:
+              values: ['high', 'medium', 'low']
+      - name: merchant_category_group
+        tests:
+          - accepted_values:
+              values: ['regulated', 'standard', 'high_value', 'other']

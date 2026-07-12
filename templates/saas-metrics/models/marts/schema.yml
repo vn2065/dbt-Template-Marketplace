@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: Customer dimension. One row per customer, with current subscription state, LTV, and segmentation.
+    columns:
+      - name: customer_id
+        description: Primary key.
+        tests:
+          - not_null
+          - unique
+      - name: customer_status
+        tests:
+          - accepted_values:
+              values: ['active', 'churned']
+      - name: customer_segment
+        tests:
+          - accepted_values:
+              values: ['enterprise', 'mid_market', 'smb', 'churned']
+
+  - name: fct_mrr
+    description: Monthly MRR fact table. One row per subscription per month.
+    columns:
+      - name: mrr_id
+        description: Surrogate key (subscription_id + month_start).
+        tests:
+          - not_null
+          - unique
+      - name: subscription_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_subscriptions')
+              field: subscription_id
+      - name: movement_type
+        tests:
+          - accepted_values:
+              values: ['new_business', 'expansion', 'contraction', 'churn', 'reactivation', 'retained']
+
+  - name: fct_churn
+    description: Churn fact table. One row per churned subscription.
+    columns:
+      - name: churn_id
+        description: Surrogate key (subscription_id).
+        tests:
+          - not_null
+          - unique
+      - name: subscription_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_subscriptions')
+              field: subscription_id
+      - name: tenure_segment
+        tests:
+          - accepted_values:
+              values: ['long_tenure', 'mid_tenure', 'short_tenure']

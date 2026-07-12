@@ -1,0 +1,51 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: One row per order, renamed and typed from the raw seed.
+    columns:
+      - name: order_id
+        description: Primary key.
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        tests:
+          - not_null
+      - name: status
+        tests:
+          - not_null
+      - name: total_amount
+        tests:
+          - not_null
+
+  - name: stg_order_items
+    description: One row per line item within an order.
+    columns:
+      - name: order_item_id
+        description: Primary key.
+        tests:
+          - not_null
+          - unique
+      - name: order_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_orders')
+              field: order_id
+      - name: quantity
+        tests:
+          - not_null
+
+  - name: stg_sessions
+    description: One row per web session, renamed and typed from the raw seed.
+    columns:
+      - name: session_id
+        description: Primary key.
+        tests:
+          - not_null
+          - unique
+      - name: channel_group
+        tests:
+          - accepted_values:
+              values: ['paid', 'organic', 'email', 'referral', 'direct', 'other']
